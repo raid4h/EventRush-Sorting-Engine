@@ -1,0 +1,115 @@
+Story Context
+You are working at a company called EventRush, which manages emergency service requests. The
+system receives thousands of requests and must prioritize them correctly.
+Your task is to build a custom sorting engine using Merge Sort and Quick Sort from scratch.
+Important: You are NOT allowed to use any built-in sorting functions.
+
+Problem Structure
+This assignment contains multiple interconnected problems, similar to LeetCode problems. Each
+function builds on your understanding of sorting.
+
+Data Format
+Each request is represented as:
+# [ request_id , urgency , service_time , zone , timestamp ]
+[101 , 5, 20, 3, 15]
+
+General Rules
+• Do NOT use built-in sorting
+• You MUST implement merge sort and quick sort from scratch
+• You MUST use the provided skeleton
+• You MUST only write code inside TODO blocks
+
+Task 1: Stable Sorting (Merge Sort)
+Goal: Sort requests by:
+1. Higher urgency first
+2. If tie: smaller timestamp first
+3. If tie: smaller request ID first
+Function:
+def merge_sort_requests (self , arr):
+Important:
+• Must be stable
+• Must use merge sort
+
+Task 2: Quick Sort by Zone
+Sort requests by:
+1. Smaller zone first
+2. If tie: higher urgency first
+def quick_sort_zone (self , arr , low , high ):
+
+Task 3: Top-K Urgent Requests
+Return top K requests:
+def top_k (self , arr , k):
+Edge Cases:
+• k = 0
+• k ≥ n
+
+Task 4: Detect Dangerous Input
+def is_dangerous (self , arr):
+Return True if input is bad for naive quick sort.
+
+Task 5: Custom Merge Only
+def merge_custom (self , arr , left , mid , right ):
+Sort rule:
+• smaller service time
+• higher urgency
+• smaller timestamp
+
+Task 6: 3-Way Quick Sort
+def quick_sort_three_way (self , arr , low , high ):
+Sort by urgency descending.
+
+Task 7: Reverse Merge Sort
+def merge_sort_desc (self , arr):
+Sort by timestamp descending.
+
+Skeleton Code
+class SortEngine :
+def compare_priority (self , a, b):
+# higher urgency first
+if a[1] != b [1]:
+return a[1] > b[1]
+if a[4] != b [4]:
+return a[4] < b[4]
+return a[0] < b[0]
+# TODO 1
+def merge_sort_requests (self , arr):
+pass
+# TODO 2
+def merge (self , left , right ):
+pass
+# TODO 3
+def quick_sort_zone (self , arr , low , high ):
+pass
+# TODO 4
+def partition_zone (self , arr , low , high ):
+pass
+# TODO 5
+def top_k (self , arr , k):
+pass
+# TODO 6
+def is_dangerous (self , arr):
+pass
+# TODO 7
+def merge_custom (self , arr , left , mid , right ):
+pass
+# TODO 8
+def quick_sort_three_way (self , arr , low , high ):
+pass
+# TODO 9
+def merge_sort_desc (self , arr):
+pass
+
+Constraints
+• 1 ≤ n ≤ 105
+• values are integers
+
+Hints
+• Merge Sort = divide + merge
+• Quick Sort = partition + recursion
+• Stability means preserving order of equal elements
+
+Submission
+Compress everything and submit the .zip file only.
+• Python file in .py
+• Output screenshots in a folder
+• Short explanation, written in a .docx file
