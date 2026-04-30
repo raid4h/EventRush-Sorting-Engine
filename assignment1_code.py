@@ -164,5 +164,4 @@ if __name__ == "__main__":
     print(f"3-Way Sorted (Urgency Desc): {three_way_data}")
 
     print("\nTask 7: Reverse Merge Sort (Timestamp)")
-    # Should show [101... timestamp 15] first
     print(engine.merge_sort_desc(data))
